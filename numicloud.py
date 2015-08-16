@@ -11,9 +11,9 @@ from werkzeug import secure_filename
 app = Flask(__name__)
 
 # This is the path to the upload directory
-app.config['UPLOAD_FOLDER'] = '/home/flask/numicloud/files/'
+app.config['UPLOAD_FOLDER'] = 'files/'
 # These are the extension that we are accepting to be uploaded
-app.config['ALLOWED_EXTENSIONS'] = set(['py','apk','txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif','zip'])
+app.config['ALLOWED_EXTENSIONS'] = set(['py','apk','txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 # For a given file, return whether it's an allowed type or not
 def allowed_file(filename):
